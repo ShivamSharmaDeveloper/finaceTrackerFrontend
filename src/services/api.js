@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // API configuration and interceptors
 const api = axios.create({
-    baseURL: process.env?.VUE_APP_API_URL || 'http://localhost:8000/api/',
+    baseURL: import.meta.env?.REACT_APP_API_URL || 'http://localhost:8000/api/',
     headers: { 'Content-Type': 'application/json' },
     timeout: 5000
 });
