@@ -42,7 +42,7 @@ A modern and responsive web application for managing personal finances, built wi
    ```
 4. Create a `.env` file with:
    ```
-   REACT_APP_API_URL=http://localhost:8000/api
+   VITE_API_URL=http://localhost:8000/api
    ```
 
 ## Running the Application
@@ -71,7 +71,7 @@ src/
 
 ## Environment Variables
 
-- `REACT_APP_API_URL`: Backend API URL (default: http://localhost:8000/api)
+- `VITE_API_URL`: Backend API URL (default: http://localhost:8000/api)
 
 ## Third-Party Libraries
 
