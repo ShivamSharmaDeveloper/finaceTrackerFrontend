@@ -74,7 +74,7 @@ const theme = createTheme({
 // Protected Route component
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
-  
+
   if (!isAuthenticated) {
     return <Navigate to="/login" />;
   }
@@ -85,7 +85,7 @@ const ProtectedRoute = ({ children }) => {
 // Public Route component (redirects to dashboard if already authenticated)
 const PublicRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
-  
+
   if (isAuthenticated) {
     return <Navigate to="/" />;
   }
@@ -106,37 +106,37 @@ function App() {
                   <Login />
                 </PublicRoute>
               } />
-              
+
               <Route path="/" element={
                 <ProtectedRoute>
                   <Dashboard />
                 </ProtectedRoute>
               } />
-              
+
               <Route path="/transactions" element={
                 <ProtectedRoute>
                   <TransactionList />
                 </ProtectedRoute>
               } />
-              
+
               <Route path="/transactions/add" element={
                 <ProtectedRoute>
                   <TransactionForm />
                 </ProtectedRoute>
               } />
-              
+
               <Route path="/transactions/:id/edit" element={
                 <ProtectedRoute>
                   <TransactionForm />
                 </ProtectedRoute>
               } />
-              
+
               <Route path="/budget" element={
                 <ProtectedRoute>
                   <BudgetManagement />
                 </ProtectedRoute>
               } />
-              
+
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </AuthProvider>

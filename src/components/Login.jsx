@@ -31,18 +31,18 @@ const Login = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+        e.preventDefault();
     setLoading(true);
-    try {
+        try {
       await login(formData);
     } catch (error) {
       // Error is handled in the auth context
     } finally {
       setLoading(false);
-    }
-  };
+        }
+    };
 
-  return (
+    return (
     <Box
       sx={{
         minHeight: '100vh',
@@ -61,30 +61,30 @@ const Login = () => {
             </Typography>
             <Typography variant="body2" color="text.secondary" mt={1}>
               Sign in to manage your finances
-            </Typography>
+                </Typography>
           </Box>
 
           <Box component="form" onSubmit={handleSubmit}>
-            <TextField
-              fullWidth
+                    <TextField
+                        fullWidth
               label="Username"
               name="username"
               value={formData.username}
               onChange={handleChange}
-              margin="normal"
-              required
+                        margin="normal"
+                        required
               autoFocus
-            />
+                    />
 
-            <TextField
-              fullWidth
+                    <TextField
+                        fullWidth
               label="Password"
               name="password"
               type={showPassword ? 'text' : 'password'}
               value={formData.password}
               onChange={handleChange}
-              margin="normal"
-              required
+                        margin="normal"
+                        required
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -108,7 +108,7 @@ const Login = () => {
               sx={{ mt: 3 }}
             >
               {loading ? <CircularProgress size={24} /> : 'Sign In'}
-            </Button>
+                    </Button>
 
             <Box mt={3} textAlign="center">
               <Typography variant="body2" color="text.secondary">
@@ -122,7 +122,7 @@ const Login = () => {
         </CardContent>
       </Card>
     </Box>
-  );
+    );
 };
 
 export default Login;

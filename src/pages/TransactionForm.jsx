@@ -81,13 +81,10 @@ const TransactionForm = () => {
         setLoading(false);
       }
     };
-    if (categories.length === 0) {
-      fetchCategories();
-    }
-    if (id) {
-      fetchTransaction();
-    }
-  }, [id, enqueueSnackbar, categories]);
+
+    fetchCategories();
+    fetchTransaction();
+  }, [id, enqueueSnackbar, formData.type, formData.category]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
