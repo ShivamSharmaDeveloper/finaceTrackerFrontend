@@ -32,15 +32,11 @@ A modern and responsive web application for managing personal finances, built wi
 ## Installation
 
 1. Clone the repository
-2. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
-4. Create a `.env` file with:
+3. Create a `.env` file with:
    ```
    VITE_API_URL=http://localhost:8000/api
    ```
